@@ -1,0 +1,150 @@
+[meta title:"IB HL Physics" description:"Using Idyll to create an interactive explanation of IB HL Physics" /]
+
+[Header
+  fullWidth:true
+  title:"IB HL Physics"
+  subtitle:"This site is my effort to understand Physics. Hope it helps someone!"
+  background:"#222222"
+  color:"#ffffff"
+   /]
+
+
+## Welcome!
+
+This is an interactive guide that I'm making for IB HL Physics, starting with Topic 9 since that's what we're doing now. I really struggle with Physics as a subject, so I figure this can help me, and hopefully others too!
+
+[var name:"stepperIndex" value:0 /]
+[Stepper currentStep:stepperIndex]
+  [Graphic]
+     [img src:`"static/images/topics/" + stepperIndex + ".png"` /]
+  [/Graphic]
+
+  [Step]
+    [Topic 1: Measurements and Uncertainties](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 2: Mechanics](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 3: Thermal Physics](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 4: Waves](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 5: Electricity and Magnetism](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 6: Circular Motion and Gravitation](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 7: Atomic, Nuclear, and Particle Physics](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 8: Energy Production](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 9: Wave Phenomena](./topic9/)
+  [/Step]
+  [Step]
+    [Topic 10: Fields](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 11: Electromagnetic Induction](./comingSoon/)
+  [/Step]
+  [Step]
+    [Topic 12: Quantum and Nuclear Physics](./comingSoon/)
+  [/Step]
+
+  [StepperControl /]
+[/Stepper]
+
+## Markup
+
+Idyll is based on Markdown.
+
+You can use familiar syntax
+to create **bold** (`**bold**` ) and *italic* (``*italic*` ) styles,
+
+* lists
+* of
+* items,
+
+```
+* lists
+* of
+* items,
+```
+
+1. and numbered
+2. lists
+3. of items,
+
+
+```
+1. and numbered
+2. lists
+3. of items,
+```
+
+in addition to [hyperlinks](https://idyll-lang.org) and images:
+
+![quill](static/images/quill.svg)
+
+```
+![quill](static/images/quill.svg)
+```
+#hi
+##hi
+###hi
+####hi
+#####hi
+######hi
+## Components
+
+Components can be embedded using a bracket syntax:
+
+```
+[Range /]
+```
+
+and can contain nested content:
+
+ω
+
+```
+[Equation]e=mc^{2}[/Equation]
+```
+
+Components accept properties:
+
+```
+[Range value:x min:0 max:1 /]
+```
+
+that can be bound to variables to achieve interactivity (more in next section).
+
+
+A variety of components are included by default. See [all the available components](https://idyll-lang.org/docs/components/). You can also use any html tag, for example: `[div] A div! [/div]`.
+
+To create your own, add it to the `components/` folder. There are examples of how to use Idyll with React and D3 based components already included.
+
+
+
+## Interactivity
+
+Here is how you can instantiate a variable and bind it to a component:
+
+[var name:"exampleVar" value:5 /]
+
+[Range min:0 max:10 value:exampleVar /]
+[Display value:exampleVar /]
+
+```
+[var name:"exampleVar" value:5 /]
+
+[Range min:0 max:10 value:exampleVar /]
+[Display value:exampleVar /]
+```
+
+#
