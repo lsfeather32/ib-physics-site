@@ -22,3 +22,12 @@ A peg is mounted on a turntable that rotates at a constant angular speed. The tu
 
 ### Circular motion and SHM
 In mathematical terms, what figure 1 does is equivalent to projecting the two-dimesional motion of a point onto the single dimension of a line. Imagine a point P rotating around the perimeter of a circle with a constant angular speed ω. The radius of the circle r joins P with the centre of the circle O. At time t = 0 the radius is horizontal and at time t it has moved through an angle θ radians. For constant angular speed ω = \frac{θ}{t}, rearranging this gives θ = ωt. Projecting P onto the y-axis gives the vertical component of r as r sin θ. Projecting P onto the x-axis gives the horizontal component of r as r cos θ. The variation of the vertical component with time or angle is shown on the right of fgure 2 and takes the form of a sine curve. Because the rate of rotation is constant, the angle θ or ωt is proportional to time. If we drew a graph of y against t the quantities 2π and π would be replaced by T and __T  2 respectively.
+
+### Andrew Test Section
+
+Hey Larissa! If you can see this, it means my changes were sent through Github and added to your repo!
+Here's a test graph, just for fun.
+[Chart
+  equation:` (t) => Math.sin(t)`
+  domain:`[0, 2 * Math.PI]`
+  samplePoints:1000 /]
